@@ -1,5 +1,5 @@
 <template>
-  <p></p>
+  <p>Podcasts</p>
 </template>
 
 <script>
