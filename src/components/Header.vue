@@ -4,7 +4,7 @@
       <router-link to="/" class="logo">
         <img src="" alt="" />
       </router-link>
-      <ul class="menu-navigation" id="menu-nav">
+      <ul class="navigation" id="nav">
         <router-link to="/"
           ><li><a class="">Home</a></li></router-link
         >
@@ -14,12 +14,12 @@
           </li>
         </router-link>
         <router-link to="/podcasts">
-          <li><a class="">Podcasts</a></li>
+          <li><a class="nav-link">Podcasts</a></li>
         </router-link>
         <router-link>
           <li><a class="">Books</a></li>
         </router-link>
-        <li><a class="">Latest Posts</a></li>
+        <li><a class="">All Posts</a></li>
         <li>
           <a class="">Get in touch</a>
         </li>

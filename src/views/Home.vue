@@ -1,9 +1,21 @@
 <template>
-  <p></p>
+  <section>
+    <LatestPost />
+    <MainPosts />
+  </section>
 </template>
 
 <script>
-export default {};
+import LatestPost from "@/components/LatestPost.vue";
+import MainPosts from "@/components/MainPosts.vue";
+
+export default {
+  name: "home",
+  components: {
+    LatestPost,
+    MainPosts,
+  },
+};
 </script>
 
 <style></style>
