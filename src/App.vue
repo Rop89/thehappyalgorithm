@@ -1,5 +1,8 @@
 <template>
-  <div id="app">
+  <div
+    id="app"
+    class="bg-erik font-joan text-black w-full h-100 m-0 p-0 overflow-hidden"
+  >
     <Header />
     <main id="main">
       <transition mode="out-in">
@@ -23,51 +26,7 @@ export default {
 </script>
 
 <style>
-body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #eaebeb;
-  color: black;
-}
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background: black;
-  color: white;
-}
-
-nav a:hover {
-  color: #d5c8bb;
-}
-
-nav ul li a {
-  padding: 0 16px;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  list-style-type: none;
-  padding-bottom: 10px;
-}
-
-a {
+/* a {
   color: inherit;
 }
 
@@ -78,5 +37,5 @@ a:active {
 a:link {
   text-decoration: none;
   color: white;
-}
+} */
 </style>
