@@ -1,9 +1,13 @@
 <template>
-  <p>Podcasts</p>
+  <section>
+    <p class=" bg-red-500">Podcasts - test test</p>
+  </section>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "podcasts",
+};
 </script>
 
 <style></style>

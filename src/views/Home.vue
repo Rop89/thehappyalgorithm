@@ -1,16 +1,18 @@
 <template>
-  <section>
-    <LatestPost />
-    <MainPosts />
-  </section>
+  <div>
+    <section>
+      <LatestPost />
+      <MainPosts />
+    </section>
+  </div>
 </template>
 
 <script>
 import LatestPost from "@/components/LatestPost.vue";
-import MainPosts from "@/components/MainPosts.vue";
+import MainPosts from "@/views/MainPosts.vue";
 
 export default {
-  name: "home",
+  name: "Home",
   components: {
     LatestPost,
     MainPosts,

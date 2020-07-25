@@ -1,27 +1,34 @@
 <template>
   <section>
+    <div v-if="post" class="pt-20">
+      <h1>Post</h1>
+    </div>
     <div>
-      <ul></ul>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae,
+        voluptas quam iusto, nostrum unde pariatur asperiores nihil atque a
+        velit facere inventore reiciendis excepturi, sequi eum! Ipsum aperiam
+        odio sed.
+      </p>
     </div>
   </section>
 </template>
 
 <script>
 import { api } from "@/../services.js";
-
 export default {
-  name: "Post",
+  name: "post",
   props: ["id"],
   data() {
     return {
-      post: null,
+      posts: null,
     };
   },
   methods: {
     getPost() {
       api.get(`/post/${this.id}`).then(response => {
-        this.post = response.data;
-        console.log(this.post);
+        this.posts = response.data;
+        console.log(this.posts);
       });
     },
   },

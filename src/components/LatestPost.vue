@@ -4,11 +4,7 @@
     <div class="ml-10 flex flex-row">
       <div class="ml-64">
         <a href=""
-          ><img
-            class=" mt-8 pt-32 "
-            src="../assets/study-work.png"
-            :to="/post/"
-            alt=""
+          ><img class=" mt-8 pt-32 " src="../assets/study-work.png" alt=""
         /></a>
       </div>
       <div class="pl-32 pr-32 p-20 mt-8 ml-10 mr-64">
@@ -22,15 +18,19 @@
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <a href=""><button class="read-more">Read more about this</button></a>
+        <router-link :to="{ name: 'post', params: { id: post.id } }">
+          <div>
+            <button class="read-more">Read more about this</button>
+          </div>
+        </router-link>
       </div>
     </div>
   </section>
 </template>
-
 <script>
 export default {
   name: "LatestPost",
+  props: ["id"],
 };
 </script>
 

@@ -25,17 +25,4 @@ export default {
 };
 </script>
 
-<style>
-/* a {
-  color: inherit;
-}
-
-a:active {
-  text-decoration: none;
-}
-
-a:link {
-  text-decoration: none;
-  color: white;
-} */
-</style>
+<style></style>
