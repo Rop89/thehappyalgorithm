@@ -14,9 +14,6 @@
         >Podcasts</router-link
       >
       <router-link class="pr-4 hover:text-sofia" to="/books">Books</router-link>
-      <router-link class="pr-4 hover:text-sofia" to="/allposts"
-        >All Posts</router-link
-      >
       <router-link class="pr-4 hover:text-sofia" to="/getintouch"
         >Get in touch
       </router-link>

@@ -1,21 +1,22 @@
 <template>
-  <footer>
-    <div class="footer">
-      <ul class="navigation">
-        <li>
-          <a class="back" id="nav" href="">&uarr;Back to Top</a>
-        </li>
-        <li><a class="home" href="#home">Home</a></li>
-        <li><a class="contact" href="#">Get in Touch</a></li>
-      </ul>
+  <footer class="bg-black mt-40">
+    <div
+      class="flex flex-row justify-center w-full pt-8 pb-8 bg-black text-white "
+    >
+      <router-link class="pr-4 hover:text-sofia" to="/"
+        >&uarr;Back to Top</router-link
+      >
+
+      <router-link class="pr-4 hover:text-sofia" to="/"> Home</router-link>
+      <router-link class="pr-4 hover:text-sofia" to="/getintouch"
+        >Get in touch
+      </router-link>
     </div>
     <div class="footer-social">
-      <ul class="footer-navigation-social">
-        <li><a href="" class="fa fa-instagram"></a></li>
-        <li><a href="" class="fa fa-twitter"></a></li>
-        <li><a href="" class="fa fa-facebook"></a></li>
-        <li><a href="" class="fa fa-youtube"></a></li>
-      </ul>
+      <div class="fa fa-instagram" href="www.instagram.com"></div>
+      <div class="fa fa-twitter" to="/"></div>
+      <div class="fa fa-facebook" to="/"></div>
+      <div class="fa fa-youtube" to="/"></div>
     </div>
     <div class="rights">
       <p>© Personal House Shopper. All rights reserved. Designed by THA.</p>
@@ -30,22 +31,6 @@ export default {
 </script>
 
 <style scoped>
-footer {
-  background: black;
-  margin-top: 100px;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  font-size: 15px;
-}
-
-.navigation a:hover {
-  color: #d5c8bb;
-}
-
 .footer ul li {
   list-style-type: none;
   padding: 10px;

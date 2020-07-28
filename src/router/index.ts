@@ -4,7 +4,6 @@ import Home from "../views/Home.vue";
 import ProductivityHacks from "../views/ProductivityHacks.vue";
 import Podcasts from "../views/Podcasts.vue";
 import Books from "../views/Books.vue";
-import MainPosts from "../views/MainPosts.vue";
 import GetInTouch from "../views/GetInTouch.vue";
 import Subscribe from "../views/Subscribe.vue";
 import Post from "../views/Post.vue";
@@ -34,11 +33,6 @@ export default new Router({
       path: "/books",
       name: "books",
       component: Books,
-    },
-    {
-      path: "/allposts",
-      name: "allposts",
-      component: MainPosts,
     },
     {
       path: "/getintouch",

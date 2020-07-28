@@ -1,15 +1,15 @@
 <template>
   <section>
-    <div v-if="post" class="pt-20">
-      <h1>Post</h1>
-    </div>
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae,
-        voluptas quam iusto, nostrum unde pariatur asperiores nihil atque a
-        velit facere inventore reiciendis excepturi, sequi eum! Ipsum aperiam
-        odio sed.
-      </p>
+    <div class="mt-58">
+      <ul>
+        <li>
+          <img src="" alt="" />
+        </li>
+      </ul>
+      <div class="mt-32">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.article }}</p>
+      </div>
     </div>
   </section>
 </template>
@@ -21,14 +21,14 @@ export default {
   props: ["id"],
   data() {
     return {
-      posts: null,
+      post: null,
     };
   },
   methods: {
     getPost() {
       api.get(`/post/${this.id}`).then(response => {
-        this.posts = response.data;
-        console.log(this.posts);
+        this.post = response.data;
+        console.log(this.post);
       });
     },
   },
