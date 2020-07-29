@@ -5,7 +5,10 @@
       <div class="ml-12 " v-for="(post, index) in posts" :key="index">
         <router-link :to="{ name: 'post', params: { id: post.id } }">
           <a href=""
-            ><img class=" mt-8 pt-32 " :src="post.photo" :alt="post.title"
+            ><img
+              class=" mt-8 pt-32 "
+              :src="`../assets/${post.photo}`"
+              :alt="post.title"
           /></a>
           <h2>{{ post.title }}</h2>
           <p class="text-justify text-sm pt-6">
