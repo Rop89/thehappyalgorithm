@@ -6,7 +6,7 @@
           <img src="" alt="" />
         </li>
       </ul>
-      <div class="mt-32">
+      <div class="mt-32" v-if="post">
         <h1>{{ post.title }}</h1>
         <p>{{ post.article }}</p>
       </div>
@@ -28,7 +28,6 @@ export default {
     getPost() {
       api.get(`/post/${this.id}`).then(response => {
         this.post = response.data;
-        console.log(this.post);
       });
     },
   },

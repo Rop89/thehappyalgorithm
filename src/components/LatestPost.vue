@@ -1,13 +1,14 @@
 <template>
   <section>
     <h2 class="mt-32 flex justify-center text-3xl ">The Happy Algorithm</h2>
-    <div class="grid grid-rows-4 grid-flow-col">
-      <div class="ml-12 " v-for="(post, index) in posts" :key="index">
+    <transition mode="out-in">
+    <div class="grid grid-rows-4 grid-flow-col justify-center">
+      <div class="ml-12 text-center " v-for="(post, index) in posts" :key="index">
         <router-link :to="{ name: 'post', params: { id: post.id } }">
           <a href=""
             ><img
-              class=" mt-8 pt-32 "
-              :src="`../assets/${post.photo}`"
+              class=" mt-8 mb-8 pt-10 h-64 w-64"
+              :src="'/' + post.photo"
               :alt="post.title"
           /></a>
           <h2>{{ post.title }}</h2>
@@ -17,6 +18,7 @@
         </router-link>
       </div>
     </div>
+    </transition>
   </section>
 </template>
 <script>
@@ -32,10 +34,8 @@ export default {
   },
   methods: {
     getAllPosts() {
-      this.posts = null;
       api.get(`/post`).then(response => {
-        this.posts = response.data;
-        console.log(this.posts);
+       return this.posts = response.data;
       });
     },
   },
