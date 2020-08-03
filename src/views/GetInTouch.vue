@@ -1,25 +1,33 @@
 <template>
-  <form>
-    
-    <div class="user pt-24 flex flex-col justify-center">
+<div>
+  <form class=" form flex justify-center">
+    <div class="form-container pt-24 flex flex-col justify-center ">
       <h1 class="text-center mt-6 mb-10">Get in touch</h1>
-      <label for="nome">Name</label>
-      <input id="name" name="name" type="text" v-model="name" />
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" v-model="email" />
-      <label for="message">Message</label>
-      <input id="message" name="message" type="text" v-model="message" />
-      
+      <label class="pt-4 pb-4 text-center" for="name">Name</label>
+      <input class="name rounded p-1 shadow resize-none"  name="name" type="text" v-model="name" />
+      <label class="pt-4 pb-4 text-center " for="email ">Email</label>
+      <input class="email rounded p-1 shadow resize-none "  name="email" type="email" v-model="email" />
+      <label class="pt-4 pb-4 text-center" for="message">Message</label>
+      <textarea class="message w-64 resize rounded mb-8 shadow" name="message" type="text" v-model="message"></textarea>
+      <button class="bg-black text-white w-48 ml-8 p-2 rounded" @click.prevent="createUser">Submit</button>
     </div>
-    <button @click.prevent="createUser">Submit</button>
   </form>
+  
+  <SocialMedia class="p-10 text-4xl "/>
+
+  </div>
+  
 </template>
 
 <script>
 
 import { mapFields } from "@/../helpers.js";
+import SocialMedia from "@/components/SocialMedia.vue"
 
 export default {
+  components:{
+    SocialMedia
+  },
   computed:{
     ...mapFields({
       fields:[
@@ -49,4 +57,8 @@ export default {
 
 </script>
 
-<style></style>
+<style>
+
+
+
+</style>

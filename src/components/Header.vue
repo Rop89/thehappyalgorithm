@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav
-      class="flex flex-row justify-center fixed top-0 left-0 z-1000 w-full pt-8 pb-8 bg-black text-white"
+      class="flex flex-row justify-center absolute top-0 left-0 z-1000 w-full pt-8 pb-8 bg-black text-white"
     >
       <router-link to="" class="">
         <img src="" alt="" />
@@ -27,5 +27,6 @@
 <script>
 export default {
   name: "Header",
+ 
 };
 </script>

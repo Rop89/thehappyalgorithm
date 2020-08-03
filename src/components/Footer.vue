@@ -12,17 +12,7 @@
         >Get in touch
       </router-link>
     </div>
-    <div
-      class="footer-social flex flex-row justify-center text-white text-sm pb-3 cursor-pointer"
-    >
-      <div
-        class="fa fa-instagram pr-3 hover:text-sofia"
-        to="https://www.instagram.com"
-      ></div>
-      <div class="fa fa-twitter pr-3 hover:text-sofia" to="/"></div>
-      <div class="fa fa-facebook pr-3 hover:text-sofia" to="/"></div>
-      <div class="fa fa-youtube pr-3 hover:text-sofia" to="/"></div>
-    </div>
+  <SocialMedia/>
     <div class="rights">
       <p>© Personal House Shopper. All rights reserved. Designed by THA.</p>
     </div>
@@ -30,8 +20,13 @@
 </template>
 
 <script>
+
+import SocialMedia from "@/components/SocialMedia.vue";
 export default {
   name: "Footer",
+  components:{
+    SocialMedia
+  }
 };
 </script>
 

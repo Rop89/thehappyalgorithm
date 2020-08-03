@@ -1,5 +1,8 @@
 module.exports = {
   theme: {
+    scale:{
+      '110': '1.1'
+    },
     extend: {
       colors: {
         erik: "#eaebeb",
@@ -12,9 +15,13 @@ module.exports = {
     },
   },
   variants: {
-  
+    scale:[
+      'hover'
+    ]
   },
-  plugins: [],
+  plugins: [
+    
+  ],
   purge: {
     enabled: process.env.NODE_ENV === "production",
     content: ["./public/**/*.html", "./src/**/*.vue", "./src/**/*.jsx"],
