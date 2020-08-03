@@ -11,7 +11,7 @@
       <input id="message" name="message" type="text" v-model="message" />
       
     </div>
-    <button>Submit</button>
+    <button @click.prevent="createUser">Submit</button>
   </form>
 </template>
 
@@ -30,8 +30,23 @@ export default {
       base:"user",
       mutation:"UPDATE_USER"
     })
+  },
+  methods:{
+    async createUser(){
+     try {
+        await this.$store.dispatch("createUser", this.$store.state.user);
+        await this.$store.dispatch(
+          "getUser",
+          this.$store.state.user.email
+        );
+        this.$router.push({ name: "user" });
+      } catch (error) {
+        console.log(error);
+      }
+    }
   }
 };
+
 </script>
 
 <style></style>

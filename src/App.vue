@@ -26,6 +26,7 @@ export default {
 </script>
 
 <style>
+
 .v-enter,
 .v-leave-to {
   opacity: 0;

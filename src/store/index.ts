@@ -22,8 +22,10 @@ export default new Vuex.Store({
       return api.get(`/user/${payload}`).then(response => {
         context.commit("UPDATE_USER", response.data);
       });
-    }
+    },
+    createUser(context, payload) {
+      context.commit("UPDATE_USER", { id: payload.email });
+      return api.post("/user", payload);
+    },
   },
-  modules: {
-  }
 })

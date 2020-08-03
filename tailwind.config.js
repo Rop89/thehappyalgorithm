@@ -8,9 +8,12 @@ module.exports = {
       fontFamily: {
         joan: "'Montserrat', sans-serif",
       },
+     
     },
   },
-  variants: {},
+  variants: {
+  
+  },
   plugins: [],
   purge: {
     enabled: process.env.NODE_ENV === "production",
