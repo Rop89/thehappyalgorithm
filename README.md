@@ -1,5 +1,7 @@
 # tha-blog-app
 
+This is a productivity blog fully built in vue.js. 
+
 ## Project setup
 ```
 npm install
