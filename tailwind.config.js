@@ -10,6 +10,7 @@ module.exports = {
       },
       fontFamily: {
         joan: "'Montserrat', sans-serif",
+        pedro:"'Poppins', sans-serif'"
       },
      
     },

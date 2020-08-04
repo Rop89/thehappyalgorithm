@@ -10,11 +10,18 @@ export default new Vuex.Store({
      name:"",
      email:"",
      message:""
+   },
+   subscriber:{
+     id:"",
+     email:""
    }
   },
   mutations: {
     UPDATE_USER(state,payload){
       state.user = Object.assign(state.user,payload)
+    },
+    UPDATE_SUBSCRIBER(state,payload){
+      state.subscriber = Object.assign(state.subscriber, payload)
     }
   },
   actions: {
@@ -27,5 +34,15 @@ export default new Vuex.Store({
       context.commit("UPDATE_USER", { id: payload.email });
       return api.post("/user", payload);
     },
+    getSubscriber(context,payload){
+      return api.get(`/subscriber/${payload}`).then(response=>{
+        context.commit("UPDATE_SUBSCRIBER",response.data);
+      })
+    },
+    createSub(context,payload){
+      context.commit("UPDATE_SUBSCRIBER", { id: payload.id });
+      return api.post("/subscriber", payload);
+    }
   },
+
 })
