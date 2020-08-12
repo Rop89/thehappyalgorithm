@@ -1,20 +1,18 @@
 <template>
-<div>
-  <div class=" subscribe pt-32 flex flex-col justify-center border-solid border-red">
-    <h1 class="subscribe-title pb-8">Subscribe to our newsletter 🚀 </h1>
-    <p class="subscribe-title pb-8"> If you want to be a part of our Happy Algorithm community don't forget to sign up to our newsletter.
-      We will have loads of new productivity hacks for you and much much more. 
-    </p>
-    <h2 class="subscribe-title pb-8">Click below to sign up</h2>
+<div class="subscribe-wrapper"> 
+  <div class=" subscribe pt-40 flex flex-col items-center ">
+      <h1 class="subscribe-title pb-8 text-lg">Subscribe to our newsletter 🚀 </h1>
+      <p class="subscribe-title pb-8">If you want to be a part of our Happy Algorithm community don't forget to sign up to our newsletter.<br>
+        We will have loads of new productivity hacks for you and much much more. 
+      </p>
   </div>
-  <form action="" class="flex justify-center flex-col">
-    <label class="pt-4 pb-4 text-center " for="email ">Email*</label>
-    <input class="email rounded p-1 shadow resize-none w-40"  name="email" type="email" v-model="email">
-  </form>
-  <div>
-    <button class="bg-black text-white w-48 ml-8 p-2 rounded" @click.prevent="createSub">Submit</button>
+    <form action="" class="flex flex-col justify-center items-center">
+      <label class="pt-4 pb-4 text-center" for="email">Email*</label>
+      <input class="email rounded p-1 shadow resize-none w-56"  name="email" type="email" v-model="email">
+      <button class="bg-black text-white w-48 mt-8 p-3 rounded" @click.prevent="createSub">Submit</button>
+    </form>
   </div>
-</div>
+
 
 </template>
 

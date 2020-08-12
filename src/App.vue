@@ -4,7 +4,7 @@
     class="bg-erik font-pedro text-black w-full h-100 m-0 p-0 overflow-hidden"
   >
     <Header />
-    <main id="main">
+    <main class="main">
       <transition mode="out-in">
         <router-view />
       </transition>
