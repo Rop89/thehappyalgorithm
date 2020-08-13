@@ -1,7 +1,7 @@
 module.exports = {
   theme: {
-    scale:{
-      '110': '1.1'
+    scale: {
+      "110": "1.1",
     },
     extend: {
       colors: {
@@ -10,19 +10,17 @@ module.exports = {
       },
       fontFamily: {
         joan: "'Montserrat', sans-serif",
-        pedro:"'Poppins', sans-serif'"
+        pedro: "'Poppins', sans-serif'",
       },
-     
+      margin: {
+        "-7": "-18rem",
+      },
     },
   },
   variants: {
-    scale:[
-      'hover'
-    ]
+    scale: ["hover"],
   },
-  plugins: [
-    
-  ],
+  plugins: [],
   purge: {
     enabled: process.env.NODE_ENV === "production",
     content: ["./public/**/*.html", "./src/**/*.vue", "./src/**/*.jsx"],

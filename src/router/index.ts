@@ -3,6 +3,7 @@ import Router, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
 import ProductivityHacks from "../views/ProductivityHacks.vue";
 import Podcasts from "../views/Podcasts.vue";
+import Book from "../views/Book.vue";
 import Books from "../views/Books.vue";
 import GetInTouch from "../views/GetInTouch.vue";
 import Subscribe from "../views/Subscribe.vue";
@@ -33,6 +34,12 @@ export default new Router({
       path: "/books",
       name: "books",
       component: Books,
+    },
+    {
+      path: "/book/:id",
+      name: "book",
+      component: Book,
+      props: true,
     },
     {
       path: "/getintouch",

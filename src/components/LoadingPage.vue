@@ -1,9 +1,9 @@
 <template>
-  <div class="loading">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+  <div class="loading flex justify-center align-middle mt-32">
+    <span class="inline-block w-4 h-4 bg-black m-1 rounded-lg"></span>
+    <span class="inline-block w-4 h-4 bg-black m-1 rounded-lg"></span>
+    <span class="inline-block w-4 h-4 bg-black m-1 rounded-lg"></span>
+    <span class="inline-block w-4 h-4 bg-black m-1 rounded-lg"></span>
   </div>
 </template>
 
@@ -14,18 +14,7 @@ export default {
 </script>
 
 <style scoped>
-.loading {
-  text-align: center;
-  margin-top: 80px;
-}
-
 .loading span {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 10px;
-  background: black;
-  margin: 4px;
   animation: dots 0.6s cubic-bezier(0.6, 0.1, 1, 0.4) infinite alternate;
 }
 
