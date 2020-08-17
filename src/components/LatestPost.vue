@@ -14,7 +14,7 @@
         >
           <router-link :to="{ name: 'post', params: { id: post.id } }">
             <img
-              class=" post-img rounded h-48 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 "
+              class=" post-img rounded h-64 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 "
               :src="'/' + post.photo"
               :alt="post.title"
             />

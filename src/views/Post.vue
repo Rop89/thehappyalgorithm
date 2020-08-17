@@ -1,13 +1,13 @@
 <template>
   <section>
-    <div class="mt-58">
-      <ul>
-        <li>
-          <img src="" alt="" />
-        </li>
-      </ul>
-      <div class="mt-32" v-if="post">
-        <h1>{{ post.title }}</h1>
+    <div class="mt-58 flex flex-col justify-center align-middle">
+      <div class="mt-32 pt-6 " v-if="post">
+        <img
+          class="post-img rounded pb-6 "
+          :src="'/' + post.photo"
+          :alt="post.title"
+        />
+        <h1 class="article-title text-xl font-bold pb-6">{{ post.title }}</h1>
         <p>{{ post.article }}</p>
       </div>
     </div>

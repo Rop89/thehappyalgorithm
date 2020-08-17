@@ -1,7 +1,7 @@
 <template>
   <div
     id="app"
-    class="bg-erik font-pedro text-black w-full h-100 m-0 p-0 overflow-hidden"
+    class="bg-erik font-pedro text-black w-100 h-100 m-0 p-0 overflow-hidden display-none"
   >
     <Header />
     <main class="main">
@@ -26,16 +26,6 @@ export default {
 </script>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  height: 100%;
-}
-
 /*Transition effect*/
 
 .v-enter,
