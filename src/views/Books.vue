@@ -4,7 +4,7 @@
       <div
         v-if="books"
         key="books"
-        class=" mt-32 grid grid-rows-2 grid-flow-col gap-4 justify-center"
+        class=" mt-32 grid grid-rows-1 grid-flow-col gap-4 justify-center"
       >
         <div
           class=" text-center mt-8 mb-8 pt-8 "
@@ -45,11 +45,9 @@ export default {
   },
   methods: {
     getAllBooks() {
-      window.setTimeout(() => {
-        api.get(`/book`).then(response => {
-          return (this.books = response.data);
-        });
-      }, 1500);
+      api.get(`/book`).then(response => {
+        return (this.books = response.data);
+      });
     },
   },
   created() {

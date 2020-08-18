@@ -7,7 +7,6 @@ import Book from "../views/Book.vue";
 import Books from "../views/Books.vue";
 import GetInTouch from "../views/GetInTouch.vue";
 import Subscribe from "../views/Subscribe.vue";
-import Post from "../views/Post.vue";
 
 Vue.use(Router);
 
@@ -50,12 +49,6 @@ export default new Router({
       path: "/subscribe",
       name: "subscribe",
       component: Subscribe,
-    },
-    {
-      path: "/post/:id",
-      name: "post",
-      component: Post,
-      props: true,
     },
   ],
 });

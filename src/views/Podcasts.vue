@@ -4,7 +4,7 @@
       <div
         v-if="podcasts"
         key="podcasts"
-        class=" mt-32 ml-16 grid grid-rows-3 gap-3 grid-flow-col justify-center"
+        class=" mt-32  grid grid-rows-1  grid-flow-col justify-center"
       >
         <div
           class=" text-center mt-8 mb-8 pt-8 "
@@ -40,11 +40,9 @@ export default {
   },
   methods: {
     getAllPodcasts() {
-      window.setTimeout(() => {
-        api.get(`/podcast`).then(response => {
-          return (this.podcasts = response.data);
-        });
-      }, 1500);
+      api.get(`/podcast`).then(response => {
+        return (this.podcasts = response.data);
+      });
     },
   },
   created() {
